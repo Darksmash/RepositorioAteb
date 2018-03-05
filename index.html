@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>Repositorio ATEB</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -33,7 +33,13 @@
         <h5 class="header col s12 light"></h5>
       </div>
       <div class="row center">
-        <a href="http://192.168.0.205/ASDKV8/Login.aspx" target="_blank" id="download-button" class="btn-large waves-effect waves-light orange">ARANDA</a>
+        <a href="http://192.168.0.205/ASDKV8/Login.aspx" target="_blank" id="download-button" class="btn-large waves-effect waves-light cyan">ARANDA</a>
+          
+          <a href="http://red.cofidi.com.mx/Default.aspx" target="_blank" id="download-button" class="btn-large waves-effect waves-light cyan">RED COFIDI</a>
+          
+        <a href="https://www.ateb-cfdi.com.mx/cofidi_ter/principal.do" target="_blank" id="download-button" class="btn-large waves-effect waves-light cyan">PACWEB</a>
+          
+        <a href="https://www.ateb-cfdi.com.mx:8443/cofidi_nom/principal.do" target="_blank" id="download-button" class="btn-large waves-effect waves-light cyan">PACWEB NOMINA</a>
       </div>
       <br><br>
 
@@ -60,7 +66,8 @@
         
         
                     <ol>
-                    <li><a href="https://darksmash.github.io/RepositorioAteb/wb/red_cofidi/RETENIDOS.html">IMPUESTOS RETENIDOS</a></li>
+                    <li><a href="https://darksmash.github.io/RepositorioAteb/wb/red_cofidi/RETENIDOS.html" target="_blank">IMPUESTOS RETENIDOS</a></li>
+                        
                     <li> IMPUESTOS TRASLADOS</li>
                     </ol>                  
                 </div>     
@@ -68,38 +75,93 @@
 
     
 
-<!--  <div class="container">
+  <div class="container">
     <div class="section">
 
       
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
+            <h2 class="center light-blue-text"><i class="material-icons">search</i></h2>
+            <h5 class="center">Query de Busqueda</h5>
 
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+            <p class="light">SELECT  sysobjects.name AS table_name, syscolumns.name AS column_name,
+<br>          systypes.name AS datatype, syscolumns.LENGTH AS LENGTH
+<br>
+<br>FROM       sysobjects INNER JOIN
+<br>              syscolumns ON sysobjects.id = syscolumns.id INNER JOIN
+<br>             systypes ON syscolumns.xtype = systypes.xtype
+<br>
+<br>WHERE     (sysobjects.xtype = 'U')
+<br>                and (UPPER(syscolumns.name) like upper('%Monto%'))
+<br>
+<br>ORDER BY sysobjects.name, syscolumns.colid </p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
+            <h2 class="center light-blue-text"><i class="material-icons">event_note</i></h2>
+            <h5 class="center">Ligas de Portales</h5>
 
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+            <p class="light"></p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">filter_none</i></h2>
+            <h5 class="center">Manuales</h5>
+
+            <p class="light"></p>
+          </div>
+        </div>
+          
+      </div> 
+
+    </div>
+    <br><br>
+  </div> 
+         
+           <div class="container">
+    <div class="section">
+
+      
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">adb</i></h2>
+            <h5 class="center">Validadores</h5>
+
+            <p class="light">
+              
+                        <p align="center"><a href="https://www.lacorona.com.mx/fortiz/sat/cfdcvali.php" target="_blank" id="download-button" class="btn-large waves-effect waves-light green">La Corona</a></p>
+              
+                                      <p align="center"><a href="https://solucionfactible.com/sfic/validador_factura_electronica/validacionCFD.jsp" target="_blank" id="download-button" class="btn-large waves-effect waves-light green">S. Factible</a></p>
+                  
+              </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">account_balance</i></h2>
+            <h5 class="center">ANEXO 20 Y GUIAS</h5>
+
+            <p class="light"></p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
+            <h5 class="center">OTROS</h5>
 
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            <p class="light"></p>
           </div>
         </div>
-      </div> -->
+          
+      </div> 
 
     </div>
     <br><br>
