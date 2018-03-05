@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>el importe registrado en el campo subtotal no es igual a la suma de los importes...</title>
+<link rel="important stylesheet" href="chrome://messagebody/skin/messageBody.css">
+</head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><b>Asunto: </b>el importe registrado en el campo subtotal no es igual a la suma de los importes...</td></tr><tr><td><b>De: </b>Oswaldo Peralta &lt;oswaldo.peralta@ateb.com.mx&gt;</td></tr><tr><td><b>Fecha: </b>02/03/2018 14:58</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><b>Para: </b>oswaldoadidas@hotmail.com</td></tr></table><br>
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; ">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p><br>
+    </p>
+    <br>
+    <br>
+    <img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5884?header=saveas&part=1.2.2&filename=pdhffgpckebfkbma.png" alt=""><br>
+    <br>
+    Identificar la factura con ese error (la de la imagen de abajo ya
+    está timbrada porque se aplicaron los cambios después):<br>
+    <br>
+    <img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5884?header=saveas&part=1.2.3&filename=jjeegkfeldkojlfe.png" alt=""><br>
+    <br>
+    Ver el XML intermedio (generarlo en formato .XML quitando la fecha
+    que sale del principio del documento .LOG)<br>
+    <br>
+    .LOG del XML intermedio generado:<br>
+    <img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5884?header=saveas&part=1.2.4&filename=mafpcpgaklogjagd.png" alt=""><br>
+    <br>
+    XML intermedio generado con extensión .XML:<br>
+    <img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5884?header=saveas&part=1.2.5&filename=pdloooepghljiobn.png" alt=""><br>
+    <br>
+    XML intermedio:<br>
+    <img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5884?header=saveas&part=1.2.6&filename=gilenaonpnmkkfhn.png" alt=""><br>
+    <br>
+    <br>
+    <br>
+    APLICAR LOS SIGUIENTES QUERIES PARA MODIFICAR EL SUBTOTAL Y EL MONTO
+    DE LA TABLA FACTURA:<br>
+    PRIMERO SE DEBEN EJECUTAR LOS SELECT HACIA FACTURA Y FACTURADTL PARA
+    VER LOS CÁLCULOS REALIZADOS:<br>
+    <br>
+    <img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5884?header=saveas&part=1.2.7&filename=jlpeaddpdeledcli.png" alt=""><br>
+    <br>
+    AMARRAR DE FORMA CORRECTA CON UN WHERE AL MOMENTO DE REALIZAR EL
+    UPDATE.<br>
+    <br>
+    ESTOS QUERIRES SON LOS QUE SE DEBEN DE APLICAR. OBVIAMENTE LOS
+    VALORES DE FACTURA, ID, MONTO Y SUBTOTAL VAN A CAMBIAR.<br>
+    <br>
+    select Monto,SubTotal,* from factura where factura = '00000PAOLA'
+    and ID = '003EAF11-FBD9-4025-B7D5-B7A9D526BF24'<br>
+    select SUM(cantidad*Precio) from FacturaDtl  where factura =
+    '00000PAOLA' and ID = '003EAF11-FBD9-4025-B7D5-B7A9D526BF24'<br>
+    <br>
+    update factura set Monto = '' where factura = '00000PAOLA' and ID =
+    '003EAF11-FBD9-4025-B7D5-B7A9D526BF24'<br>
+    update factura set SubTotal = '' where factura = '00000PAOLA' and ID
+    = '003EAF11-FBD9-4025-B7D5-B7A9D526BF24'<br>
+    <br>
+    <br>
+    <br>
+    Con esto el documento quedará timbrado.<br>
+    <div class="moz-signature">-- <br>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title></title>
+      <br>
+      <div class="moz-signature">-- <br>
+        <p><br>
+        </p>
+        <br>
+        <div class="moz-signature">-- <br>
+          <br>
+            <img shrinktofit="true" alt=""
+            src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5884?header=saveas&part=1.2.8" height="88"
+            width="621">
+          <div class="moz-signature">
+            <p class="MsoNormal"><span><img shrinktofit="true"
+                  id="Picture_x0020_1"
+                  src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5884?header=saveas&part=1.2.9"
+                  alt="firma ateb" height="57" width="340"></span></p>
+            <div>
+              <div>
+                <p class="MsoNormal"><b><span>Oswaldo Peralta Saldivar</span></b><b><br>
+                  </b><span><b>Consult</b></span><b>or JR at ATEB<br>
+                  </b><a href="mailto:marco.miranda@ateb.com.mx">oswaldo.peralta@ateb.com.mx</a><br>
+                  <b><span>Tel. 51180300</span></b><span> </span><b><br>
+                    Ext: 1184</b><br>
+                  <a href="http://www.ateb.mx">www.ateb.mx</a> </p>
+                <p class="MsoNormal"><a
+                    href="https://www.facebook.com/AtebMex/"
+                    target="_blank"
+                    title="https://www.facebook.com/AtebMex/"><span><img
+                        shrinktofit="true" id="_x0000_i1030"
+                        src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5884?header=saveas&part=1.2.10"
+                        alt="Facebook_-_icono" height="37" width="37"></span></a><span
+                    lang="EN-US">  </span><a
+                    href="https://twitter.com/atebmex" target="_blank"
+                    title="https://twitter.com/atebmex"><span><img
+                        shrinktofit="true" id="_x0000_i1031"
+                        src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5884?header=saveas&part=1.2.11"
+                        alt="twitter_logo (2)" height="37" width="37"></span></a><span
+                    lang="EN-US">            </span></p>
+                <p class="MsoNormal"><span lang="EN-US">_________________________________________________________________</span><span
+                    lang="EN-US"> </span></p>
+                <p class="MsoNormal"><span lang="EN-US">The information
+                    contained in this communication is intended solely
+                    for the use of the individual or entity to whom it
+                    is addressed and others authorized to receive it. It
+                    may contain confidential or legally privileged
+                    information. If you are not the intended recipient
+                    you are hereby notified that any disclosure,
+                    copying, distribution or taking any action in
+                    reliance on the contents of this information is
+                    strictly prohibited and may be unlawful. If you have
+                    received this communication in error, please notify
+                    us immediately by responding to this email and then
+                    delete it from your system. ATEB Servicios, is
+                    neither liable for the proper and complete
+                    transmission of the information contained in this
+                    communication nor for any delay in its receipt.</span></p>
+                <p class="MsoNormal">La información contenida en esta
+                  comunicación se dirige exclusivamente para el uso de
+                  la persona o entidad a quien va dirigida y otras
+                  personas autorizadas para recibirla. Puede contener
+                  información confidencial o legalmente protegida. Si
+                  usted no es el destinatario indicado, queda notificado
+                  de que la divulgación, copia, distribución o tomar
+                  cualquier acción basada en el contenido de esta
+                  información está estrictamente prohibida y puede ser
+                  ilegal. Si ha recibido este mensaje por error, por
+                  favor notifique inmediatamente respondiendo a este
+                  correo electrónico y luego eliminarlo de su sistema.
+                  ATEB Servicios, no es ni responsable de la transmisión
+                  adecuada y completa de la información contenida en
+                  esta comunicación ni de ningún retraso en su
+                  recepción.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+</body>
+</html>

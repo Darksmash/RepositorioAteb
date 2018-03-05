@@ -1,0 +1,306 @@
+<html>
+<head>
+<title>cambiar decimales del precio (valorUnitario) XML y PDF</title>
+<link rel="important stylesheet" href="chrome://messagebody/skin/messageBody.css">
+</head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><b>Asunto: </b>cambiar decimales del precio (valorUnitario) XML y PDF</td></tr><tr><td><b>De: </b>Oswaldo Peralta &lt;oswaldo.peralta@ateb.com.mx&gt;</td></tr><tr><td><b>Fecha: </b>02/03/2018 14:48</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><b>Para: </b>oswaldoadidas@hotmail.com</td></tr><tr><td><b>CC: </b>Oswaldo Peralta &lt;oswaldo.peralta@ateb.com.mx&gt;</td></tr></table><br>
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; ">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p><br>
+    </p>
+    <p>Modificar el CFDIGEN e ir al SELECT 8:</p>
+    <p>La línea de amarillo fue agregada en este caso:</p>
+    <p>,ROUND(convert(Numeric(14,4),(Case @TipoCalculoMontoLinea When 2
+      Then (Customfield01) Else (cantidad*precio) End)),2,0) as
+      [cfdi:Concepto!8!importe]</p>
+    <p><img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.2&filename=jgapdngenabphlkh.png" alt=""></p>
+    <p><br>
+    </p>
+    <p>De igual forma se aplicó un alter a la tabla facturadtl:</p>
+    <p><br>
+    </p>
+    <p><img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.3&filename=bhmfmhapljgjkiej.png" alt=""></p>
+    <p><img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.4&filename=mdeoecpddbndeagd.png" alt=""></p>
+    <p><br>
+    </p>
+    <p><img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.5&filename=bohdjmnpcfemdgam.png" alt=""></p>
+    <p><br>
+    </p>
+    <p><span style="box-sizing: inherit; font-family: Consolas,
+        &quot;courier new&quot;; font-size: 16px; font-style: normal;
+        font-variant-ligatures: normal; font-variant-caps: normal;
+        font-weight: 400; letter-spacing: normal; orphans: 2;
+        text-align: start; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 2; word-spacing: 0px;
+        -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+        255); text-decoration-style: initial; text-decoration-color:
+        initial; color: mediumblue;">ALTER</span><span style="color:
+        rgb(0, 0, 0); font-family: Consolas, &quot;courier new&quot;;
+        font-size: 16px; font-style: normal; font-variant-ligatures:
+        normal; font-variant-caps: normal; font-weight: 400;
+        letter-spacing: normal; orphans: 2; text-align: start;
+        text-indent: 0px; text-transform: none; white-space: normal;
+        widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+        background-color: rgb(255, 255, 255); text-decoration-style:
+        initial; text-decoration-color: initial; display: inline
+        !important; float: none;"><span> </span></span><span
+        style="box-sizing: inherit; font-family: Consolas, &quot;courier
+        new&quot;; font-size: 16px; font-style: normal;
+        font-variant-ligatures: normal; font-variant-caps: normal;
+        font-weight: 400; letter-spacing: normal; orphans: 2;
+        text-align: start; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 2; word-spacing: 0px;
+        -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+        255); text-decoration-style: initial; text-decoration-color:
+        initial; color: mediumblue;">TABLE</span><span style="color:
+        rgb(0, 0, 0); font-family: Consolas, &quot;courier new&quot;;
+        font-size: 16px; font-style: normal; font-variant-ligatures:
+        normal; font-variant-caps: normal; font-weight: 400;
+        letter-spacing: normal; orphans: 2; text-align: start;
+        text-indent: 0px; text-transform: none; white-space: normal;
+        widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+        background-color: rgb(255, 255, 255); text-decoration-style:
+        initial; text-decoration-color: initial; display: inline
+        !important; float: none;"><span> </span></span><em
+        style="box-sizing: inherit; color: rgb(0, 0, 0); font-family:
+        Consolas, &quot;courier new&quot;; font-size: 16px;
+        font-variant-ligatures: normal; font-variant-caps: normal;
+        font-weight: 400; letter-spacing: normal; orphans: 2;
+        text-align: start; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 2; word-spacing: 0px;
+        -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+        255); text-decoration-style: initial; text-decoration-color:
+        initial;">facturadtl</em><br style="box-sizing: inherit; color:
+        rgb(0, 0, 0); font-family: Consolas, &quot;courier new&quot;;
+        font-size: 16px; font-style: normal; font-variant-ligatures:
+        normal; font-variant-caps: normal; font-weight: 400;
+        letter-spacing: normal; orphans: 2; text-align: start;
+        text-indent: 0px; text-transform: none; white-space: normal;
+        widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+        background-color: rgb(255, 255, 255); text-decoration-style:
+        initial; text-decoration-color: initial;">
+      <span style="box-sizing: inherit; font-family: Consolas,
+        &quot;courier new&quot;; font-size: 16px; font-style: normal;
+        font-variant-ligatures: normal; font-variant-caps: normal;
+        font-weight: 400; letter-spacing: normal; orphans: 2;
+        text-align: start; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 2; word-spacing: 0px;
+        -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+        255); text-decoration-style: initial; text-decoration-color:
+        initial; color: mediumblue;">ALTER</span><span style="color:
+        rgb(0, 0, 0); font-family: Consolas, &quot;courier new&quot;;
+        font-size: 16px; font-style: normal; font-variant-ligatures:
+        normal; font-variant-caps: normal; font-weight: 400;
+        letter-spacing: normal; orphans: 2; text-align: start;
+        text-indent: 0px; text-transform: none; white-space: normal;
+        widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+        background-color: rgb(255, 255, 255); text-decoration-style:
+        initial; text-decoration-color: initial; display: inline
+        !important; float: none;"><span> </span></span><span
+        style="box-sizing: inherit; font-family: Consolas, &quot;courier
+        new&quot;; font-size: 16px; font-style: normal;
+        font-variant-ligatures: normal; font-variant-caps: normal;
+        font-weight: 400; letter-spacing: normal; orphans: 2;
+        text-align: start; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 2; word-spacing: 0px;
+        -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+        255); text-decoration-style: initial; text-decoration-color:
+        initial; color: mediumblue;">COLUMN</span><span style="color:
+        rgb(0, 0, 0); font-family: Consolas, &quot;courier new&quot;;
+        font-size: 16px; font-style: normal; font-variant-ligatures:
+        normal; font-variant-caps: normal; font-weight: 400;
+        letter-spacing: normal; orphans: 2; text-align: start;
+        text-indent: 0px; text-transform: none; white-space: normal;
+        widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+        background-color: rgb(255, 255, 255); text-decoration-style:
+        initial; text-decoration-color: initial; display: inline
+        !important; float: none;"><span><em> </em></span></span><em
+        style="box-sizing: inherit; color: rgb(0, 0, 0); font-family:
+        Consolas, &quot;courier new&quot;; font-size: 16px;
+        font-variant-ligatures: normal; font-variant-caps: normal;
+        font-weight: 400; letter-spacing: normal; orphans: 2;
+        text-align: start; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 2; word-spacing: 0px;
+        -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+        255); text-decoration-style: initial; text-decoration-color:
+        initial;"></em><span style="color: rgb(0, 0, 0); font-family:
+        Consolas, &quot;courier new&quot;; font-size: 16px; font-style:
+        normal; font-variant-ligatures: normal; font-variant-caps:
+        normal; font-weight: 400; letter-spacing: normal; orphans: 2;
+        text-align: start; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 2; word-spacing: 0px;
+        -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+        255); text-decoration-style: initial; text-decoration-color:
+        initial; display: inline !important; float: none;"><b
+          style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+          font-size: 16px; font-style: normal; font-variant-ligatures:
+          normal; font-variant-caps: normal; letter-spacing: normal;
+          orphans: 2; text-align: left; text-indent: 0px;
+          text-transform: none; white-space: normal; widows: 2;
+          word-spacing: 0px; -webkit-text-stroke-width: 0px;
+          background-color: rgb(255, 255, 255); text-decoration-style:
+          initial; text-decoration-color: initial;">[ Precio] </b></span><span
+        style="color: rgb(0, 0, 0); font-family: Consolas, &quot;courier
+        new&quot;; font-size: 16px; font-style: normal;
+        font-variant-ligatures: normal; font-variant-caps: normal;
+        font-weight: 400; letter-spacing: normal; orphans: 2;
+        text-align: start; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 2; word-spacing: 0px;
+        -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+        255); text-decoration-style: initial; text-decoration-color:
+        initial; display: inline !important; float: none;"><b
+          style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+          font-size: 16px; font-style: normal; font-variant-ligatures:
+          normal; font-variant-caps: normal; letter-spacing: normal;
+          orphans: 2; text-align: left; text-indent: 0px;
+          text-transform: none; white-space: normal; widows: 2;
+          word-spacing: 0px; -webkit-text-stroke-width: 0px;
+          background-color: rgb(255, 255, 255); text-decoration-style:
+          initial; text-decoration-color: initial;"><b style="color:
+            rgb(34, 34, 34); font-family: arial, sans-serif; font-size:
+            16px; font-style: normal; font-variant-ligatures: normal;
+            font-variant-caps: normal; letter-spacing: normal; orphans:
+            2; text-align: left; text-indent: 0px; text-transform: none;
+            white-space: normal; widows: 2; word-spacing: 0px;
+            -webkit-text-stroke-width: 0px; background-color: rgb(255,
+            255, 255); text-decoration-style: initial;
+            text-decoration-color: initial;">[ numeric] (14, 5)</b></b>;</span></p>
+    <p><span style="color: rgb(0, 0, 0); font-family: Consolas,
+        &quot;courier new&quot;; font-size: 16px; font-style: normal;
+        font-variant-ligatures: normal; font-variant-caps: normal;
+        font-weight: 400; letter-spacing: normal; orphans: 2;
+        text-align: start; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 2; word-spacing: 0px;
+        -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+        255); text-decoration-style: initial; text-decoration-color:
+        initial; display: inline !important; float: none;"><br>
+      </span></p>
+    <p><span style="color: rgb(0, 0, 0); font-family: Consolas,
+        &quot;courier new&quot;; font-size: 16px; font-style: normal;
+        font-variant-ligatures: normal; font-variant-caps: normal;
+        font-weight: 400; letter-spacing: normal; orphans: 2;
+        text-align: start; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 2; word-spacing: 0px;
+        -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+        255); text-decoration-style: initial; text-decoration-color:
+        initial; display: inline !important; float: none;">Se checa en
+        base de datos cuántos decimales vienen en el precio con un
+        select (en este caso el documento no estaba timbrado):</span></p>
+    <p><span style="color: rgb(0, 0, 0); font-family: Consolas,
+        &quot;courier new&quot;; font-size: 16px; font-style: normal;
+        font-variant-ligatures: normal; font-variant-caps: normal;
+        font-weight: 400; letter-spacing: normal; orphans: 2;
+        text-align: start; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 2; word-spacing: 0px;
+        -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+        255); text-decoration-style: initial; text-decoration-color:
+        initial; display: inline !important; float: none;"><img
+          src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.6&filename=ikjnpapbbpjjddbi.png" alt=""></span></p>
+    <p><br>
+    </p>
+    <p>Se cambia el reporte para aumentar a decimales deseados:</p>
+    <p><img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.7&filename=efahkoajfojjljbc.png" alt=""></p>
+    <p><br>
+    </p>
+    <p><img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.8&filename=mijkjoidmcbpeddh.png" alt=""></p>
+    <p><br>
+    </p>
+    <p>Se visualizan los cambios en el PDF:<br>
+    </p>
+    <p><br>
+    </p>
+    <p><img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.9&filename=hgffjjolffoaebao.png" alt=""></p>
+    <p><br>
+    </p>
+    <p>Y en el XML:</p>
+    <p><img src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.10&filename=lapkhhpomepnionn.png" alt=""></p>
+    <div class="moz-signature">-- <br>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title></title>
+      <br>
+      <div class="moz-signature">-- <br>
+        <p><br>
+        </p>
+        <br>
+        <div class="moz-signature">-- <br>
+          <br>
+            <img shrinktofit="true" alt=""
+            src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.11" height="88"
+            width="621">
+          <div class="moz-signature">
+            <p class="MsoNormal"><span><img shrinktofit="true"
+                  id="Picture_x0020_1"
+                  src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.12"
+                  alt="firma ateb" height="57" width="340"></span></p>
+            <div>
+              <div>
+                <p class="MsoNormal"><b><span>Oswaldo Peralta Saldivar</span></b><b><br>
+                  </b><span><b>Consult</b></span><b>or JR at ATEB<br>
+                  </b><a href="mailto:marco.miranda@ateb.com.mx">oswaldo.peralta@ateb.com.mx</a><br>
+                  <b><span>Tel. 51180300</span></b><span> </span><b><br>
+                    Ext: 1184</b><br>
+                  <a href="http://www.ateb.mx">www.ateb.mx</a> </p>
+                <p class="MsoNormal"><a
+                    href="https://www.facebook.com/AtebMex/"
+                    target="_blank"
+                    title="https://www.facebook.com/AtebMex/"><span><img
+                        shrinktofit="true" id="_x0000_i1030"
+                        src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.13"
+                        alt="Facebook_-_icono" height="37" width="37"></span></a><span
+                    lang="EN-US">  </span><a
+                    href="https://twitter.com/atebmex" target="_blank"
+                    title="https://twitter.com/atebmex"><span><img
+                        shrinktofit="true" id="_x0000_i1031"
+                        src="imap-message://oswaldo%2Eperalta%40ateb%2Ecom%2Emx@mail.ateb.com.mx/Sent#5883?header=saveas&part=1.2.14"
+                        alt="twitter_logo (2)" height="37" width="37"></span></a><span
+                    lang="EN-US">            </span></p>
+                <p class="MsoNormal"><span lang="EN-US">_________________________________________________________________</span><span
+                    lang="EN-US"> </span></p>
+                <p class="MsoNormal"><span lang="EN-US">The information
+                    contained in this communication is intended solely
+                    for the use of the individual or entity to whom it
+                    is addressed and others authorized to receive it. It
+                    may contain confidential or legally privileged
+                    information. If you are not the intended recipient
+                    you are hereby notified that any disclosure,
+                    copying, distribution or taking any action in
+                    reliance on the contents of this information is
+                    strictly prohibited and may be unlawful. If you have
+                    received this communication in error, please notify
+                    us immediately by responding to this email and then
+                    delete it from your system. ATEB Servicios, is
+                    neither liable for the proper and complete
+                    transmission of the information contained in this
+                    communication nor for any delay in its receipt.</span></p>
+                <p class="MsoNormal">La información contenida en esta
+                  comunicación se dirige exclusivamente para el uso de
+                  la persona o entidad a quien va dirigida y otras
+                  personas autorizadas para recibirla. Puede contener
+                  información confidencial o legalmente protegida. Si
+                  usted no es el destinatario indicado, queda notificado
+                  de que la divulgación, copia, distribución o tomar
+                  cualquier acción basada en el contenido de esta
+                  información está estrictamente prohibida y puede ser
+                  ilegal. Si ha recibido este mensaje por error, por
+                  favor notifique inmediatamente respondiendo a este
+                  correo electrónico y luego eliminarlo de su sistema.
+                  ATEB Servicios, no es ni responsable de la transmisión
+                  adecuada y completa de la información contenida en
+                  esta comunicación ni de ningún retraso en su
+                  recepción.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+</body>
+</html>
